@@ -32,19 +32,23 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
-
-        if (!hit.Equals(null))
+        if (Input.GetAxis("Fire1") > 0)
         {
-            Transform objectHit = hit.transform;
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D[] hits = Physics2D.GetRayIntersectionAll(ray);
 
-            if (!isMoving && objectHit != activeCharacter && (objectHit == redCharacter || objectHit == yellowCharacter || objectHit == greenCharacter))
+            foreach (RaycastHit2D hit in hits)
             {
-                Vector2 distance = objectHit.position - activeCharacter.position;
-                if (Math.Abs(distance.x) <= throwRadius && Math.Abs(distance.y) <= throwRadius)
+                Transform objectHit = hit.transform;
+
+                if (!isMoving && objectHit != activeCharacter && (objectHit == redCharacter || objectHit == yellowCharacter || objectHit == greenCharacter))
                 {
-                    activeCharacter = objectHit;
+                    Vector2 distance = objectHit.position - activeCharacter.position;
+                    if (Math.Abs(distance.x) <= throwRadius && Math.Abs(distance.y) <= throwRadius)
+                    {
+                        activeCharacter = objectHit;
+                        break;
+                    }
                 }
             }
         }
