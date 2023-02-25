@@ -11,6 +11,18 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask StopMovement;
 
+    public Transform yellowCharacter;
+    public Transform redCharacter;
+    public Transform greenCharacter;
+
+    private Transform activeCharacter;
+
+
+    void Start()
+    {
+        activeCharacter = greenCharacter;
+    }
+
 
 
     // Update is called once per frame
