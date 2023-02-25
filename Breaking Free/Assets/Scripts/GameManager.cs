@@ -67,6 +67,11 @@ public class GameManager : MonoBehaviour
         GameOverScreen.SetActive(true);
     }
 
+    public void LevelOver()
+    {
+        Retry.gameObject.SetActive(false);
+    }
+
     public void RetryLevel()
     {
         UnityEngine.SceneManagement.Scene currScene = SceneManager.GetActiveScene(); 
@@ -93,5 +98,10 @@ public class GameManager : MonoBehaviour
     public void QuitGame() {
         Application.Quit();
         Debug.Log("Exiting Game");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
