@@ -105,91 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0731_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 188aca16cd44f8644884bfe5ff6ac1fe
-      internalID: 1402293178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0731_1
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e464de7141259f4bbac30007afb38f1
-      internalID: -810135495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0731_2
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 114193809f4105044b4b6cb94ffed0c6
-      internalID: -1086975852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0731_3
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c9a9a63df3322842bdc0b9e6fb917c5
-      internalID: -1478176746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0731_4
+      name: Wires On_0
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 037b024e3cde9704eb5ed9b032453505
-      internalID: 693220278
+      spriteID: 1a19d508b816bca40ae62aeab4bb0bc4
+      internalID: 2142624957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_5
+      name: Wires On_1
       rect:
         serializedVersion: 2
         x: 200
@@ -224,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b466eba99b0bfa4392ea4168f40a35f
-      internalID: -1110650946
+      spriteID: 52af43f281cc21746adf4d89cb9feecc
+      internalID: 423766555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_6
+      name: Wires On_2
       rect:
         serializedVersion: 2
         x: 400
@@ -245,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e882e8d5d9c298148876d9f4e9d94d9e
-      internalID: 1199308133
+      spriteID: ce4cffc0040fae74386a73e0d4be3bb6
+      internalID: -1239978482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_7
+      name: Wires On_3
       rect:
         serializedVersion: 2
         x: 600
@@ -266,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c7dd281736252b4ea65239d6cfcb6ed
-      internalID: 1760624426
+      spriteID: a57e1fbd47e8cec4cab99c45e36cc8c3
+      internalID: -1114642396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_8
+      name: Wires On_4
       rect:
         serializedVersion: 2
         x: 800
@@ -287,35 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9d206f2f04170445ae32071578f9015
-      internalID: 420261828
+      spriteID: 2a07e7d94bf20fb4181630f9a96c13f4
+      internalID: 1128341073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_9
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 400
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f43fe9df21d3e2441b3c09cf63293813
-      internalID: -1177835446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0731_10
+      name: Wires On_5
       rect:
         serializedVersion: 2
         x: 1200
@@ -329,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 435e52a759a5d8b48a8387c73bceac5e
-      internalID: -1917144734
+      spriteID: ddcfb60bf75d90e429f8c78359ee08d8
+      internalID: -1587183495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_11
+      name: Wires On_6
       rect:
         serializedVersion: 2
         x: 1400
@@ -350,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f45bd80e879fa478e8b094a818f1c6
-      internalID: 673583970
+      spriteID: 9eb67d5c8397a8c4984acbd96a8329e2
+      internalID: 1678682150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_12
+      name: Wires On_7
       rect:
         serializedVersion: 2
         x: 0
@@ -371,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3de9d4a70e6de1748b39bbbb7c955be5
-      internalID: -2020170768
+      spriteID: 4cb64cd43fbeed140b7ca6269d993e22
+      internalID: 1385703478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_13
+      name: Wires On_8
       rect:
         serializedVersion: 2
         x: 200
@@ -392,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce841f4fb9d6e1b4f9989ca045cbedb3
-      internalID: 565830016
+      spriteID: 17552dc1cae6c4c4093e83c7c4d0184d
+      internalID: -212269787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_14
+      name: Wires On_9
       rect:
         serializedVersion: 2
         x: 400
@@ -413,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 801f72e784a77f044a69d02396bb2efd
-      internalID: -150440099
+      spriteID: 59c5d04bf5f320e4c9c659a3dbac5882
+      internalID: -506145057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_15
+      name: Wires On_10
       rect:
         serializedVersion: 2
         x: 600
@@ -434,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 395d4eca3d6eedb4fb50ce2e1a62b03e
-      internalID: -1115480242
+      spriteID: acf53ad03ec0e24489c5febc3867a2e8
+      internalID: -2104572494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_16
+      name: Wires On_11
       rect:
         serializedVersion: 2
         x: 800
@@ -455,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4871024d8833534381a6ae9bec49311
-      internalID: 1223742695
+      spriteID: ef494e55aecce0443b4ccb02decfb4ba
+      internalID: 886790926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_17
+      name: Wires On_12
       rect:
         serializedVersion: 2
         x: 1000
@@ -476,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e478f26de2c2a4f4e80a33dac450f022
-      internalID: -378853710
+      spriteID: 51e9915f8bb56ae429cc3f34fc201bfe
+      internalID: -491729900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_18
+      name: Wires On_13
       rect:
         serializedVersion: 2
         x: 1200
@@ -497,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45138aec0a15c364aa62a1485e2d009f
-      internalID: -1184632893
+      spriteID: 003ebda80c799df45bcf782870ef92aa
+      internalID: -1507194762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_19
+      name: Wires On_14
       rect:
         serializedVersion: 2
         x: 1400
@@ -518,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60efeca96801adc42aad7bf936e6f4ad
-      internalID: -989183135
+      spriteID: 731a88106a790ef418f566677023de48
+      internalID: -41882257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_20
+      name: Wires On_15
       rect:
         serializedVersion: 2
         x: 0
@@ -539,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c54daf1a18aa7041b9345c02fc3cf5a
-      internalID: 558173792
+      spriteID: 124b575d255ecd0489ee9b7c1fb9442f
+      internalID: -1873027554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_21
+      name: Wires On_16
       rect:
         serializedVersion: 2
         x: 200
@@ -560,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3124b27ab15c97439a99be37169b842
-      internalID: 1426244093
+      spriteID: e0f6d0212f38a314b8a96b7cb5113b8e
+      internalID: -931347416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_22
+      name: Wires On_17
       rect:
         serializedVersion: 2
         x: 400
@@ -581,14 +476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc970f8711a43ea499d533ef80147ad6
-      internalID: 1882111195
+      spriteID: 8cd1e2510e6b22546a7133d55ac2d317
+      internalID: -336169837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_23
+      name: Wires On_18
       rect:
         serializedVersion: 2
         x: 600
@@ -602,56 +497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026a66a3ce93a8b40bc852bdca6262e3
-      internalID: -731779888
+      spriteID: 57eb429006b1e394782640f56d8956bf
+      internalID: 1457369796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_24
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 0
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c27eefdcc1f53d349869885a3d6040f9
-      internalID: -1790026682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0731_25
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41b2538d6a31d904ea0fa93f0b5423c8
-      internalID: -699982796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0731_26
+      name: Wires On_19
       rect:
         serializedVersion: 2
         x: 1200
@@ -665,14 +518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29033cdfaf4aae542b0de37ac24de227
-      internalID: 1495978838
+      spriteID: a56b2d580ebf8a541b645a93d5bbe911
+      internalID: 360362466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_0731_27
+      name: Wires On_20
       rect:
         serializedVersion: 2
         x: 1400
@@ -686,8 +539,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57880e7f7c10793449692b26266f499a
-      internalID: 1346740672
+      spriteID: 5bdd12395ffa4f1498df86ea3e440cc1
+      internalID: -856795462
       vertices: []
       indices: 
       edges: []
@@ -703,34 +556,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_0731_2: -1086975852
-      IMG_0731_4: 693220278
-      IMG_0731_9: -1177835446
-      IMG_0731_24: -1790026682
-      IMG_0731_1: -810135495
-      IMG_0731_0: 1402293178
-      IMG_0731_16: 1223742695
-      IMG_0731_8: 420261828
-      IMG_0731_18: -1184632893
-      IMG_0731_13: 565830016
-      IMG_0731_27: 1346740672
-      IMG_0731_15: -1115480242
-      IMG_0731_20: 558173792
-      IMG_0731_23: -731779888
-      IMG_0731_21: 1426244093
-      IMG_0731_22: 1882111195
-      IMG_0731_19: -989183135
-      IMG_0731_7: 1760624426
-      IMG_0731_26: 1495978838
-      IMG_0731_11: 673583970
-      IMG_0731_5: -1110650946
-      IMG_0731_10: -1917144734
-      IMG_0731_6: 1199308133
-      IMG_0731_17: -378853710
-      IMG_0731_14: -150440099
-      IMG_0731_25: -699982796
-      IMG_0731_3: -1478176746
-      IMG_0731_12: -2020170768
+      Wires On_13: -1507194762
+      Wires On_2: -1239978482
+      Wires On_17: -336169837
+      Wires On_18: 1457369796
+      Wires On_16: -931347416
+      Wires On_12: -491729900
+      Wires On_15: -1873027554
+      Wires On_1: 423766555
+      Wires On_4: 1128341073
+      Wires On_8: -212269787
+      Wires On_19: 360362466
+      Wires On_20: -856795462
+      Wires On_5: -1587183495
+      Wires On_14: -41882257
+      Wires On_6: 1678682150
+      Wires On_0: 2142624957
+      Wires On_10: -2104572494
+      Wires On_3: -1114642396
+      Wires On_7: 1385703478
+      Wires On_11: 886790926
+      Wires On_9: -506145057
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
