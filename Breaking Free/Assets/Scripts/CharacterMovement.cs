@@ -33,6 +33,7 @@ public class CharacterMovement : MonoBehaviour
     {
         activeCharacter = greenCharacter;
         heart = greenCharacter.GetChild(0);
+        camera = FindObjectOfType<Camera>();
     }
 
 
@@ -161,7 +162,16 @@ public class CharacterMovement : MonoBehaviour
     public bool isActiveGreen() { return activeCharacter == greenCharacter; }
     public bool isActiveYellow() { return activeCharacter == yellowCharacter; }
 
-    public Vector3 getYellowCharPos() { return yellowCharacter.transform.position; }
-    public Vector3 getGreenCharPos() { return greenCharacter.transform.position; }
-    public Vector3 getRedCharPos() { return redCharacter.transform.position; }
+    public Vector3 getYellowCharPos() { return yellowCharacter.position; }
+    public Vector3 getGreenCharPos() { return greenCharacter.position; }
+    public Vector3 getRedCharPos() { return redCharacter.position; }
+
+    public Vector3 getActiveCharPos() { return activeCharacter.position; }
+
+    public bool isAnyCharaAt(Vector3 pos)
+    {
+        return ((pos - yellowCharacter.position).magnitude < 0.05f) ||
+            ((pos - greenCharacter.position).magnitude < 0.05f) ||
+            ((pos - redCharacter.position).magnitude < 0.05f);
+    }
 }

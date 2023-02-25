@@ -246,7 +246,7 @@ MonoBehaviour:
   throwRadius: 3
   StopMovement:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 584
   Breakable:
     serializedVersion: 2
     m_Bits: 128
