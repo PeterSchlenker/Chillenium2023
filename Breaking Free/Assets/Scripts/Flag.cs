@@ -146,6 +146,7 @@ public class Flag : MonoBehaviour
     public void DisplayLevelOverScreen()
     {
         gameManager.LevelOver();
+        FindObjectOfType<CharacterMovement>().levelOver();
         EnableButtons(false, false, false);
         levelOverScreen.gameObject.SetActive(true);
         levelOverScreen.DisplaySuccess(redHere, greenHere, yellowHere);

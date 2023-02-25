@@ -174,4 +174,9 @@ public class CharacterMovement : MonoBehaviour
             ((pos - greenCharacter.position).magnitude < 0.05f) ||
             ((pos - redCharacter.position).magnitude < 0.05f);
     }
+
+    public void levelOver()
+    {
+        isMoving = true;
+    }
 }
