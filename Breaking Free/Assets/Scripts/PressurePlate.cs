@@ -25,7 +25,7 @@ public class PressurePlate : MonoBehaviour
             {
                 wireSystem.TurnOn();
             }
-            else if (isYellow && chara.isActiveYellow())
+            else if (isYellow && (this.transform.position - chara.getYellowCharPos()).magnitude < .05)
             {
                 wireSystem.TurnOn();
             }
@@ -43,7 +43,7 @@ public class PressurePlate : MonoBehaviour
             {
                 wireSystem.TurnOn();
             }
-            else if (isYellow && (this.transform.position - chara.transform.position).magnitude < .05)
+            else if (isYellow && (this.transform.position - chara.getYellowCharPos()).magnitude < .05)
             {
                 wireSystem.TurnOn();
             }

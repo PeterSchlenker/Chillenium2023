@@ -121,7 +121,7 @@ public class CharacterMovement : MonoBehaviour
 
         while (timeLeft > 0 && targetPos != originalPos)
         {
-            activeCharacter.transform.position = Vector3.Lerp(activeCharacter.transform.position, targetPos, 0.1f);
+            activeCharacter.transform.position = Vector3.Lerp(activeCharacter.transform.position, targetPos, Time.deltaTime);
             timeLeft -= Time.deltaTime;
             yield return null; 
         }
@@ -134,4 +134,8 @@ public class CharacterMovement : MonoBehaviour
     public bool isActiveRed() { return activeCharacter == redCharacter; }
     public bool isActiveGreen() { return activeCharacter == greenCharacter; }
     public bool isActiveYellow() { return activeCharacter == yellowCharacter; }
+
+    public Vector3 getYellowCharPos() { return yellowCharacter.transform.position; }
+    public Vector3 getGreenCharPos() { return greenCharacter.transform.position; }
+    public Vector3 getRedCharPos() { return redCharacter.transform.position; }
 }
