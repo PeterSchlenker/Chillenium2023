@@ -32,6 +32,24 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("Collide");
+        CharacterMovement chara = collision.gameObject.GetComponentInParent<CharacterMovement>();
+        if (chara)
+        {
+            Debug.Log("Chara");
+            if (!isYellow)
+            {
+                wireSystem.TurnOn();
+            }
+            else if (isYellow && chara.isActiveYellow())
+            {
+                wireSystem.TurnOn();
+            }
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         wireSystem.TurnOff();

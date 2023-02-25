@@ -166,6 +166,9 @@ MonoBehaviour:
   Breakable:
     serializedVersion: 2
     m_Bits: 128
+  Jumpable:
+    serializedVersion: 2
+    m_Bits: 1024
   Death:
     serializedVersion: 2
     m_Bits: 256

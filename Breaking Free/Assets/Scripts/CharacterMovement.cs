@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour
 
     public LayerMask StopMovement;
     public LayerMask Breakable;
+    public LayerMask Jumpable;
     public LayerMask Death;
 
     public Transform redCharacter;
@@ -80,7 +81,7 @@ public class CharacterMovement : MonoBehaviour
     {
         isMoving = true;
 
-        float elapsedTime = 0;
+        float timeLeft = timeToMove;
 
         originalPos = activeCharacter.transform.position;
         targetPos = originalPos + dir;
@@ -88,25 +89,40 @@ public class CharacterMovement : MonoBehaviour
         if (Physics2D.OverlapCircle(targetPos, .2f, StopMovement))
         {
             targetPos = originalPos;
-        } else if(Physics2D.OverlapCircle(targetPos, .2f, Breakable))
+        }
+        else if (Physics2D.OverlapCircle(targetPos, .2f, Breakable))
         {
-            if(activeCharacter == redCharacter)
+            if (activeCharacter == redCharacter)
             {
                 Destroy(Physics2D.CircleCast(targetPos, .2f, dir).transform.gameObject);
-            } else
+            }
+            else
             {
                 targetPos = originalPos;
             }
-        } else if(Physics2D.OverlapCircle(targetPos, .2f, Death))
+        }
+        else if (Physics2D.OverlapCircle(targetPos, .2f, Jumpable))
+        {
+            if (activeCharacter == greenCharacter)
+            {
+                targetPos += dir;
+                timeLeft *= 3;
+            }
+            else
+            {
+                targetPos = originalPos;
+            }
+        }
+        else if (Physics2D.OverlapCircle(targetPos, .2f, Death))
         {
             //TODO: Reset Level properly
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        while (elapsedTime < timeToMove && targetPos != originalPos)
+        while (timeLeft > 0 && targetPos != originalPos)
         {
-            activeCharacter.transform.position = Vector3.Lerp(activeCharacter.transform.position, targetPos, elapsedTime/timeToMove);
-            elapsedTime += Time.deltaTime;
+            activeCharacter.transform.position = Vector3.Lerp(activeCharacter.transform.position, targetPos, 0.1f);
+            timeLeft -= Time.deltaTime;
             yield return null; 
         }
 
