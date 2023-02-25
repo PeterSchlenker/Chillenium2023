@@ -27,6 +27,7 @@ public class Flag : MonoBehaviour
         CompositeCollider2D = GetComponent<CompositeCollider2D>();
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
         //text = GetComponentInChildren<Button>();
+        EnableButtons(false, false, false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

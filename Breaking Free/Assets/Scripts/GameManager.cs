@@ -49,7 +49,9 @@ public class GameManager : MonoBehaviour
             Quit.gameObject.SetActive(false);
         } else
         {
-            
+            Retry.gameObject.SetActive(false);
+            Play.gameObject.SetActive(true);
+            Quit.gameObject.SetActive(true);
         }
     }
 
@@ -72,8 +74,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
-        UnityEngine.SceneManagement.Scene currScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currScene.name);
+        SceneManager.LoadScene(1);
     }
 
 
@@ -87,5 +88,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Go to level select screen -- doesn't exist yet");
         SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame() {
+        Application.Quit();
+        Debug.Log("Exiting Game");
     }
 }

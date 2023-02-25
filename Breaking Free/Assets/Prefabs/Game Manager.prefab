@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 8780271868197385518}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -24}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.41040653, y: 0.4002466}
+  m_AnchorMax: {x: 0.59300005, y: 0.46589717}
+  m_AnchoredPosition: {x: -1.5, y: 1.5}
+  m_SizeDelta: {x: 1, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1347065325552672518
 CanvasRenderer:
@@ -122,13 +122,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7459077897537898317}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 4443069745781815864}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -456,7 +456,7 @@ MonoBehaviour:
   flag: {fileID: 0}
   Retry: {fileID: 2203978231892805575}
   Play: {fileID: 4298933184810901672}
-  Quit: {fileID: 0}
+  Quit: {fileID: 2967723442648338649}
 --- !u!1 &7729309642229034775
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,10 +492,10 @@ RectTransform:
   m_Father: {fileID: 8780271868197385518}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -76}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.41040653, y: 0.27175343}
+  m_AnchorMax: {x: 0.59300005, y: 0.33988357}
+  m_AnchoredPosition: {x: -1.5, y: -2}
+  m_SizeDelta: {x: 1, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7388983981685019289
 CanvasRenderer:
@@ -578,7 +578,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1431326312405589717}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4443069745781815864}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7823204674440081452
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,10 +864,10 @@ RectTransform:
   m_Father: {fileID: 8780271868197385518}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 377.4624, y: 162}
-  m_SizeDelta: {x: 81.0751, y: 30}
+  m_AnchorMin: {x: 0.892, y: 0.8977399}
+  m_AnchorMax: {x: 0.98040664, y: 0.9658835}
+  m_AnchoredPosition: {x: -2.5375977, y: -3}
+  m_SizeDelta: {x: 3.0751038, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3053551320602878059
 CanvasRenderer:
