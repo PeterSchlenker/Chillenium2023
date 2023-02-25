@@ -20,6 +20,9 @@ public class Flag : MonoBehaviour
 
     [SerializeField] LayerMask characters;
 
+    LevelOverScreen levelOverScreen;
+    GameManager gameManager;
+
     public int nextSceneLoad;
 
     private void Start()
@@ -28,6 +31,9 @@ public class Flag : MonoBehaviour
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
         //text = GetComponentInChildren<Button>();
         EnableButtons(false, false, false);
+        levelOverScreen = FindObjectOfType<LevelOverScreen>();
+        levelOverScreen.gameObject.SetActive(false);
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -137,7 +143,15 @@ public class Flag : MonoBehaviour
         }
     }
 
-    public void NextLevel(int charsSaved)
+    public void DisplayLevelOverScreen()
+    {
+        gameManager.LevelOver();
+        EnableButtons(false, false, false);
+        levelOverScreen.gameObject.SetActive(true);
+        levelOverScreen.DisplaySuccess(redHere, greenHere, yellowHere);
+    }
+
+    public void NextLevel()
     {
         Debug.Log("Next level");
         if (SceneManager.GetActiveScene().buildIndex == 7)
