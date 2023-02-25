@@ -2,21 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wires : MonoBehaviour
+public class WireSystem : MonoBehaviour
 {
-    List<GameObject> connectedObjs;
+    Door[] doors;
+    Spikes[] spikes;
+
+    private void Start()
+    {
+        doors = GetComponentsInChildren<Door>();
+        spikes = GetComponentsInChildren<Spikes>();
+    }
 
     public void TurnOn()
     {
-        foreach(GameObject obj in connectedObjs)
+       foreach(Door door in doors)
         {
-            if (obj.GetComponent<Door>())
-            {
-                obj.GetComponent<Door>().Open();
-            } else if (obj.GetComponent<Spikes>())
-            {
-                obj.GetComponent<Spikes>().Open();
-            }
+            door.Open();
+        }
+
+       foreach(Spikes spikes in spikes)
+        {
+            spikes.On();
+        }
+    }
+
+    public void TurnOff()
+    {
+        foreach (Door door in doors)
+        {
+            door.Close();
+        }
+
+        foreach (Spikes spikes in spikes)
+        {
+            spikes.Off();
         }
     }
 }

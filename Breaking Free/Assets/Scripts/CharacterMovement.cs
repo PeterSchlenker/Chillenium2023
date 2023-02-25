@@ -110,4 +110,8 @@ public class CharacterMovement : MonoBehaviour
 
         isMoving = false;
     }
+
+    public bool isActiveRed() { return activeCharacter == redCharacter; }
+    public bool isActiveGreen() { return activeCharacter == greenCharacter; }
+    public bool isActiveYellow() { return activeCharacter == yellowCharacter; }
 }

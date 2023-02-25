@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void Open()
+  
+    public void Off()
     {
-        //TODO: Door animation trigger
+        //TODO: Spike animation trigger
         this.gameObject.layer = 0;
     }
 
-    public void Close()
+    public void On()
     {
-        //TODO: Door animation trigger
-        this.gameObject.layer = 6;
+        //TODO: Spike animation trigger
+        this.gameObject.layer = 8;
     }
 }
