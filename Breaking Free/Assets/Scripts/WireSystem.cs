@@ -7,6 +7,9 @@ public class WireSystem : MonoBehaviour
     Door[] doors;
     Spikes[] spikes;
 
+    public GameObject on;
+    public GameObject off;
+
     private void Start()
     {
         doors = GetComponentsInChildren<Door>();
@@ -24,6 +27,9 @@ public class WireSystem : MonoBehaviour
         {
             spikes.On();
         }
+
+        on.SetActive(true);
+        off.SetActive(false);
     }
 
     public void TurnOff()
@@ -37,5 +43,8 @@ public class WireSystem : MonoBehaviour
         {
             spikes.Off();
         }
+
+        on.SetActive(false);
+        off.SetActive(true);
     }
 }
