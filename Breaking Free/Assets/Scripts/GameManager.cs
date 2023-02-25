@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
+using UnityEditor.SearchService;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,16 +13,17 @@ public class GameManager : MonoBehaviour
     // VARIABLES
     public static GameManager instance;
 
-    public GameObject player1;
-    public Transform Characters;
+    [SerializeField] Transform Characters;
 
-    public GameObject audioManager;
+    //public GameObject audioManager;
 
     public GameObject GameOverScreen;
 
-    private int assignments;
+    [SerializeField] public Flag flag;
 
-    public MoveToNextLevel moveToNextLevel;
+    [SerializeField] Button Retry;
+    [SerializeField] Button Play;
+    [SerializeField] Button Quit;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,12 +40,21 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        moveToNextLevel = FindObjectOfType<MoveToNextLevel>();
-        Characters = FindObjectOfType<CharacterMovement>().transform;
+        if (SceneManager.GetActiveScene().name != "Main Menu")
+        {
+            flag = FindObjectOfType<Flag>();
+            Characters = FindObjectOfType<CharacterMovement>().transform;
+            Retry.gameObject.SetActive(true);
+            Play.gameObject.SetActive(false);
+            Quit.gameObject.SetActive(false);
+        } else
+        {
+            
+        }
     }
 
-    // Update is called once per frame
-    private void Update()
+        // Update is called once per frame
+        private void Update()
     {
 
     }
@@ -62,27 +74,12 @@ public class GameManager : MonoBehaviour
     public void LoadEndScreen()
     {
         Debug.Log("Go to level select screen -- doesn't exist yet");
-        // SceneManager.LoadScene("LevelSelectScreen");
+        //SceneManager.LoadScene("LevelSelectScreen");
     }
 
     public void GiveUp()
     {
         Debug.Log("Go to level select screen -- doesn't exist yet");
         SceneManager.LoadScene(0);
-    }
-
-
-    public void AddAssignment()
-    {
-        assignments++;
-    }
-
-    public void RemoveAssignment()
-    {
-        assignments--;
-        if (assignments == 0)
-        {
-            moveToNextLevel.OpenDoor();
-        }
     }
 }
