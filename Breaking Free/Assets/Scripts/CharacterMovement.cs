@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private int throwRadius = 3;
 
     public LayerMask StopMovement;
+    public LayerMask Breakable;
+    public LayerMask Death;
 
     public Transform redCharacter;
     public Transform yellowCharacter;
@@ -20,7 +23,6 @@ public class CharacterMovement : MonoBehaviour
     private Transform activeCharacter;
 
     public Camera camera;
-
 
     void Start()
     {
@@ -82,9 +84,22 @@ public class CharacterMovement : MonoBehaviour
         if (Physics2D.OverlapCircle(targetPos, .2f, StopMovement))
         {
             targetPos = originalPos;
+        } else if(Physics2D.OverlapCircle(targetPos, .2f, Breakable))
+        {
+            if(activeCharacter == redCharacter)
+            {
+                Destroy(Physics2D.CircleCast(targetPos, .2f, dir).transform.gameObject);
+            } else
+            {
+                targetPos = originalPos;
+            }
+        } else if(Physics2D.OverlapCircle(targetPos, .2f, Death))
+        {
+            //TODO: Reset Level properly
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-            while (elapsedTime < timeToMove)
+        while (elapsedTime < timeToMove && targetPos != originalPos)
         {
             activeCharacter.transform.position = Vector3.Lerp(activeCharacter.transform.position, targetPos, elapsedTime/timeToMove);
             elapsedTime += Time.deltaTime;
