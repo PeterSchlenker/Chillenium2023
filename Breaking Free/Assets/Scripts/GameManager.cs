@@ -67,9 +67,15 @@ public class GameManager : MonoBehaviour
 
     public void RetryLevel()
     {
-        Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name);
+        UnityEngine.SceneManagement.Scene currScene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(currScene.name);
     }
+    public void NextLevel()
+    {
+        UnityEngine.SceneManagement.Scene currScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currScene.name);
+    }
+
 
     public void LoadEndScreen()
     {
