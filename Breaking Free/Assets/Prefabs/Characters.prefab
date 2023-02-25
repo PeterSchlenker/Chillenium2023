@@ -159,12 +159,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToMove: 0.1
+  throwRadius: 3
   StopMovement:
     serializedVersion: 2
     m_Bits: 72
+  Breakable:
+    serializedVersion: 2
+    m_Bits: 128
+  Death:
+    serializedVersion: 2
+    m_Bits: 256
   redCharacter: {fileID: 3707448348414536620}
   yellowCharacter: {fileID: 3707448347294529753}
   greenCharacter: {fileID: 3707448348544395656}
+  camera: {fileID: 0}
 --- !u!1 &3707448348414536611
 GameObject:
   m_ObjectHideFlags: 0
