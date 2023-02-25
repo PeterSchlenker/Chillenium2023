@@ -6,6 +6,13 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
 
+    LayerMask character;
+
+    private void Start()
+    {
+        character = 9;
+    }
+
     public void Open()
     {
         //TODO: Door animation trigger
@@ -16,5 +23,10 @@ public class Door : MonoBehaviour
     {
         //TODO: Door animation trigger
         this.gameObject.layer = 6;
+        if (Physics2D.OverlapCircle(transform.position, 0.1f, character))
+        {
+            FindObjectOfType<CharacterMovement>().Die();
+            Debug.Log("Hey");
+        }
     }
 }

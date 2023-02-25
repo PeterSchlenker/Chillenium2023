@@ -29,11 +29,17 @@ public class CharacterMovement : MonoBehaviour
 
     public Camera camera;
 
+    GameOverScreen gameOverScreen;
+
     void Start()
     {
         activeCharacter = greenCharacter;
         heart = greenCharacter.GetChild(0);
         camera = FindObjectOfType<Camera>();
+        gameOverScreen = FindObjectOfType<GameOverScreen>();
+        if (gameOverScreen == null)
+            Instantiate(gameOverScreen);
+        gameOverScreen.gameObject.SetActive(false);
     }
 
 
@@ -143,7 +149,7 @@ public class CharacterMovement : MonoBehaviour
         else if (Physics2D.OverlapCircle(targetPos, .2f, Death))
         {
             //TODO: Reset Level properly
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Die();
         }
 
         while (timeLeft > 0 && targetPos != originalPos)
@@ -156,6 +162,12 @@ public class CharacterMovement : MonoBehaviour
         activeCharacter.transform.position = targetPos;
 
         isMoving = false;
+    }
+
+    public void Die()
+    {
+        isMoving = true;
+        gameOverScreen.gameObject.SetActive(true);
     }
 
     public bool isActiveRed() { return activeCharacter == redCharacter; }

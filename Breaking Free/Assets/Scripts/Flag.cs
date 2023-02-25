@@ -32,6 +32,8 @@ public class Flag : MonoBehaviour
         //text = GetComponentInChildren<Button>();
         EnableButtons(false, false, false);
         levelOverScreen = FindObjectOfType<LevelOverScreen>();
+        if (levelOverScreen == null)
+            Instantiate(levelOverScreen);
         levelOverScreen.gameObject.SetActive(false);
         gameManager = FindObjectOfType<GameManager>();
     }
