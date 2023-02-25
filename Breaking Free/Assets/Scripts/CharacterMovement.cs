@@ -23,11 +23,16 @@ public class CharacterMovement : MonoBehaviour
 
     private Transform activeCharacter;
 
+    private Transform heart;
+    [SerializeField] private float heartThrowTime = 0.1f;
+
+
     public Camera camera;
 
     void Start()
     {
         activeCharacter = greenCharacter;
+        heart = greenCharacter.GetChild(0);
     }
 
 
@@ -50,6 +55,10 @@ public class CharacterMovement : MonoBehaviour
                     if (Math.Abs(distance.x) <= throwRadius && Math.Abs(distance.y) <= throwRadius)
                     {
                         activeCharacter = objectHit;
+                        Vector3 localHeartPos = heart.localPosition;
+                        heart.parent = activeCharacter;
+                        StartCoroutine(ThrowHeart(localHeartPos));
+                        //heart.localPosition = localHeartPos;
                         break;
                     }
                 }
@@ -77,7 +86,24 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator MovePlayer(Vector3 dir)
+    private IEnumerator ThrowHeart(Vector3 nextPos)
+    {
+        isMoving = true;
+
+        float timeLeft = heartThrowTime;
+        Vector3 originalHeartPos = heart.localPosition;
+        while (timeLeft > 0)
+        {
+            heart.localPosition = Vector3.Lerp(nextPos, originalHeartPos, timeLeft/timeToMove);
+            timeLeft -= Time.deltaTime;
+            yield return null;
+        }
+
+        heart.localPosition = nextPos;
+
+        isMoving = false;
+    }
+        private IEnumerator MovePlayer(Vector3 dir)
     {
         isMoving = true;
 
@@ -121,7 +147,7 @@ public class CharacterMovement : MonoBehaviour
 
         while (timeLeft > 0 && targetPos != originalPos)
         {
-            activeCharacter.transform.position = Vector3.Lerp(activeCharacter.transform.position, targetPos, Time.deltaTime);
+            activeCharacter.transform.position = Vector3.Lerp(targetPos, originalPos, timeLeft / timeToMove);
             timeLeft -= Time.deltaTime;
             yield return null; 
         }
