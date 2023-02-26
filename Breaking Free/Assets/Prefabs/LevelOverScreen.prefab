@@ -219,7 +219,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -279,8 +279,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.73, y: 139}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -139.44627, y: 175}
+  m_SizeDelta: {x: 123.7588, y: 123.7588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8450244322841969937
 CanvasRenderer:
@@ -357,7 +357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146, y: -104}
+  m_AnchoredPosition: {x: 172, y: -99.87303}
   m_SizeDelta: {x: 442.83997, y: 77.04999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6768327211610474001
@@ -624,8 +624,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220, y: 139}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -279.62784, y: 175}
+  m_SizeDelta: {x: 123.7588, y: 123.7588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3098089865447373201
 CanvasRenderer:
@@ -700,8 +700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 315.24005, y: 98.10001}
-  m_SizeDelta: {x: 120, y: 120}
+  m_AnchoredPosition: {x: 378.52417, y: 116.00006}
+  m_SizeDelta: {x: 160.7626, y: 160.7626}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &300817946288668222
 CanvasRenderer:
@@ -776,8 +776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -195.27994, y: -66.433716}
-  m_SizeDelta: {x: 337.44, y: 280.8676}
+  m_AnchoredPosition: {x: -283.28076, y: -71.372894}
+  m_SizeDelta: {x: 391.1985, y: 325.6134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7451600122718664970
 CanvasRenderer:
@@ -1316,8 +1316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 174.7, y: 98.1}
-  m_SizeDelta: {x: 120, y: 120}
+  m_AnchoredPosition: {x: 190.24426, y: 116.000046}
+  m_SizeDelta: {x: 160.7626, y: 160.7626}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2092191624129690529
 CanvasRenderer:
@@ -1394,7 +1394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146.00003, y: -32.126984}
+  m_AnchoredPosition: {x: 172, y: -28}
   m_SizeDelta: {x: 442.83997, y: 77.04999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3599271047439904069
@@ -1528,7 +1528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146.00003, y: -176.06}
+  m_AnchoredPosition: {x: 172.00003, y: -171.93303}
   m_SizeDelta: {x: 442.83997, y: 77.04999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7674065936563860677
@@ -1660,8 +1660,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -331, y: 139}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -417, y: 175}
+  m_SizeDelta: {x: 123.7588, y: 123.7588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7609192129958335340
 CanvasRenderer:
@@ -1736,8 +1736,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.440063, y: 98.100006}
-  m_SizeDelta: {x: 120, y: 120}
+  m_AnchoredPosition: {x: 1, y: 116}
+  m_SizeDelta: {x: 160.7626, y: 160.7626}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1802304396004203768
 CanvasRenderer:
