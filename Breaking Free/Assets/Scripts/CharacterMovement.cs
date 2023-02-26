@@ -61,7 +61,9 @@ public class CharacterMovement : MonoBehaviour
                     Vector2 distance = objectHit.position - activeCharacter.position;
                     if (Math.Abs(distance.x) <= throwRadius && Math.Abs(distance.y) <= throwRadius)
                     {
+                        SetAnimation(false, false);
                         activeCharacter = objectHit;
+                        SetAnimation(false, true);
                         Vector3 localHeartPos = heart.localPosition;
                         heart.parent = activeCharacter;
                         StartCoroutine(ThrowHeart(localHeartPos));
@@ -190,5 +192,13 @@ public class CharacterMovement : MonoBehaviour
     public void levelOver()
     {
         isMoving = true;
+    }
+
+    public void SetAnimation(bool animIsMoving, bool animIsActive)
+    {
+        Animator animator = activeCharacter.GetComponent<Animator>();
+
+        animator.SetBool("isMoving", animIsMoving);
+        animator.SetBool("isActive", animIsActive);
     }
 }
