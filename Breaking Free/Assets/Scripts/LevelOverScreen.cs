@@ -20,6 +20,7 @@ public class LevelOverScreen : MonoBehaviour
     [SerializeField] TextMeshProUGUI friendText;
     [SerializeField] bool isFinalLevelScreen = false;
     [SerializeField] Image finalImage;
+    [SerializeField] Image BWfinalImage;
 
 
 
@@ -41,13 +42,6 @@ public class LevelOverScreen : MonoBehaviour
 
     public void DisplaySuccess(bool redHere, bool greenHere, bool yellowHere)
     {
-        if (isFinalLevelScreen)
-        {
-            finalImage.gameObject.SetActive(true);
-            redHere = !redHere;
-            greenHere = !greenHere;
-            yellowHere = !yellowHere;
-        }
 
         if(redHere && greenHere && yellowHere)
         {
@@ -65,6 +59,22 @@ public class LevelOverScreen : MonoBehaviour
 
     private void EnableUIStuff(bool Red, bool Green, bool Yellow, bool StarOne, bool StarTwo, bool StarThree, bool evil, bool lessEvil, bool friend)
     {
+        if (isFinalLevelScreen)
+        {
+            finalImage.gameObject.SetActive(true);
+            if (!friend)
+            {
+                BWfinalImage.gameObject.SetActive(true);
+            } else
+            {
+                BWfinalImage.gameObject.SetActive(false);
+            }
+
+            Red = !Red;
+            Green = !Green;
+            Yellow = !Yellow;
+        }
+
         AmberImage.gameObject.SetActive(Yellow);
         JadeImage.gameObject.SetActive(Green);
         JasperImage.gameObject.SetActive(Red);
@@ -91,7 +101,13 @@ public class LevelOverScreen : MonoBehaviour
         }
 
         evilText.gameObject.SetActive(evil || lessEvil || friend);
-        if(Red && evil)
+        if (isFinalLevelScreen)
+        {
+            Red = !Red;
+            Green = !Green;
+            Yellow = !Yellow;
+        }
+        else if(Red && evil)
         {
             evilText.text = "Jasper abandoned his friends to rot in their depressed state... He did not share their heart...";
         } else if(Green && evil)
