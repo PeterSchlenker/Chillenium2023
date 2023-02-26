@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 7294714935162528220}
   m_Layer: 3
   m_Name: Red Character
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
