@@ -49,7 +49,9 @@ public class VisualNovel : MonoBehaviour
     public void Display(int YGR, string textToDisplay)
     {
         textBox.gameObject.SetActive(true);
-        darkBackground.SetActive(true);
+        if(!allVisible)
+            darkBackground.SetActive(true);
+
         if (YGR == 0)
         {
             textBox.color = Color.yellow;
