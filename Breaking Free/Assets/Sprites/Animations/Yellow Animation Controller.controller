@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Yellow Charge Inactive
+  m_Name: Yellow Charge Active
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ffefa0af539029e46a10d8e5124e9c2b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6e27a9e08c3bacb44a1692ae54841a9b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -109,7 +109,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Yellow Charge Active
+  m_Name: Yellow Charge Inactive
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -124,7 +124,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6e27a9e08c3bacb44a1692ae54841a9b, type: 2}
+  m_Motion: {fileID: 7400000, guid: ffefa0af539029e46a10d8e5124e9c2b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

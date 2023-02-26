@@ -201,4 +201,11 @@ public class CharacterMovement : MonoBehaviour
         animator.SetBool("isMoving", animIsMoving);
         animator.SetBool("isActive", animIsActive);
     }
+
+    public void SetYellowAnimation(bool animIsCharging)
+    {
+        Animator animator = yellowCharacter.GetComponent<Animator>();
+
+        animator.SetBool("isCharging", animIsCharging);
+    }
 }
