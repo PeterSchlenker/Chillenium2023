@@ -1134,8 +1134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea951797b6105144fbb2c1e62e63ede9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HowToPlay: {fileID: 0}
-  dismissHowToPlay: {fileID: 0}
+  HowToPlay: {fileID: 1059066958}
+  dismissHowToPlay: {fileID: 1343092530}
 --- !u!114 &1343092533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1180,9 +1180,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4443069745740846072}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: NextLevel
+      - m_Target: {fileID: 1343092532}
+        m_TargetAssemblyTypeName: DismissHTP, Assembly-CSharp
+        m_MethodName: press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

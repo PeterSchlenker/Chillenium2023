@@ -21,6 +21,8 @@ public class LevelOverScreen : MonoBehaviour
     [SerializeField] bool isFinalLevelScreen = false;
     [SerializeField] Image finalImage;
     [SerializeField] Image BWfinalImage;
+    [SerializeField] Image CreditsImage;
+    [SerializeField] Button DismissButton;
 
 
 
@@ -141,5 +143,11 @@ public class LevelOverScreen : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void Credits()
+    {
+        CreditsImage.gameObject.SetActive(true);
+        DismissButton.gameObject.SetActive(true);
     }
 }
