@@ -28,6 +28,7 @@ public class PressurePlate : MonoBehaviour
             else if (isYellow && (this.transform.position - chara.getYellowCharPos()).magnitude < .05)
             {
                 wireSystem.TurnOn();
+                chara.SetYellowAnimation(true);
             }
         }
     }
@@ -46,13 +47,23 @@ public class PressurePlate : MonoBehaviour
             else if (isYellow && (this.transform.position - chara.getYellowCharPos()).magnitude < .05)
             {
                 wireSystem.TurnOn();
+                chara.SetYellowAnimation(true);
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        wireSystem.TurnOff();
+        CharacterMovement chara = collision.gameObject.GetComponentInParent<CharacterMovement>();
+        if (chara)
+        {
+            if (isYellow && wireSystem.on.activeInHierarchy)
+            {
+                chara.SetYellowAnimation(false);
+            }
+
+            wireSystem.TurnOff();
+        }
     }
 
 }
