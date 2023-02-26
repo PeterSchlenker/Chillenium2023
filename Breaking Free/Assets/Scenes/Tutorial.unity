@@ -1382,10 +1382,10 @@ MonoBehaviour:
   JasperImage: {fileID: 1414482366}
   textBox: {fileID: 2136841688}
   darkBackground: {fileID: 383074725}
-  YGRorder: 01000000010000000000000002000000
+  YGRorder: 0100000001000000000000000000000002000000
   textOrder:
   - '"Hey, what''s this heart over my head? I wonder if I could transfer it to Jasper
-    or Amber by pressing left click on them..."'
+    or Amber by left clicking on them..."'
   - '"Jasper! You''re super strong, break that wall with the red cracks over there!"'
   - '"Jade! You know how the nursery rhyme goes. Jade be nimble, Jade be quick, Jade
     vault over the dungeon wall!"'
