@@ -36,7 +36,7 @@ public class Flag : MonoBehaviour
         EnableButtons(false, false, false);
         //levelOverScreen = GameObject.FindGameObjectsWithTag("LevelOverScreen")[0].GetComponent<LevelOverScreen>();
         levelOverScreen.gameObject.SetActive(false);
-        gameManager = GameObject.FindGameObjectsWithTag("GameController")[0];
+        //gameManager = GameObject.FindGameObjectsWithTag("GameController")[0];
         Debug.Log("Line 40");
         Debug.Log(gameManager);
         if(gameManager == null)
