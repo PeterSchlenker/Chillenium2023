@@ -60,9 +60,31 @@ public class LevelOverScreen : MonoBehaviour
         Star1.gameObject.SetActive(StarOne);
         Star2.gameObject.SetActive(StarTwo);
         Star3.gameObject.SetActive(StarThree);
-        evilText.gameObject.SetActive(evil);
-        lessEvilText.gameObject.SetActive(lessEvil);
-        friendText.gameObject.SetActive(friend);
+
+        evilText.gameObject.SetActive(evil || lessEvil || friend);
+        if(Red && evil)
+        {
+            evilText.text = "Jasper abandoned his friends to root in their depressed state... He did not share their heart...";
+        } else if(Green && evil)
+        {
+            evilText.text = "Jade abandoned her friends to root in their depressed state... She did not share their heart...";
+        } else if(Yellow && evil)
+        {
+            evilText.text = "Amber abandoned her friends to root in their depressed state... She did not share their heart...";
+        } else if(Red && Green && lessEvil)
+        {
+            evilText.text = "Jasper and Jade abandoned Amber... They justify it to themselves by saying they were tired of her airheadedness, but deep down... they know they will miss her";
+        } else if (Red && Yellow && lessEvil)
+        {
+            evilText.text = "Jasper and Amber abandoned Jade... She was their rock and guide... What will they do without her...";
+        }
+        else if (Green && Yellow && lessEvil)
+        {
+            evilText.text = "Amber and Jade got tired of Jasper's shit and dropped his @$$. You go girls. Slay.";
+        } else if (friend)
+        {
+            friendText.text = "Jasper, Amber, and Jade left the dungeon, striding out together. Where once they had entered split and angry, they now exited as empathetic friends... for they shared one heart.";
+        }
     }
 
     public void Retry()
