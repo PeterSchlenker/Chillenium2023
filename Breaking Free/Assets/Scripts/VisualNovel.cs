@@ -21,7 +21,7 @@ public class VisualNovel : MonoBehaviour
     //[SerializeField] GameObject darkBackground;
 
     [SerializeField] CharacterMovement charas;
-    public AudioSource talk;
+    public AudioSource[] talk;
 
     bool dismissTips = false;
     [SerializeField] Button dismisButton;
@@ -87,8 +87,10 @@ public class VisualNovel : MonoBehaviour
         }
 
         textBox.text += textToDisplay;
-        if(talk)
-            talk.Play();
+        if (talk.Length > 0)
+        {
+            talk[(int)(Random.value * talk.Length)].Play();
+        }
     }
 
     public void Next()
