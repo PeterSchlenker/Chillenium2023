@@ -65,7 +65,7 @@ public class LevelOverScreen : MonoBehaviour
         if (!StarTwo)
             Star2.sprite = StarOutline;
         Star3.gameObject.SetActive(true);
-        if (!StarTwo)
+        if (!StarThree)
             Star3.sprite = StarOutline;
 
         evilText.gameObject.SetActive(evil || lessEvil || friend);

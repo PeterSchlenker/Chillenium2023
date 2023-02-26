@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI;
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 
 public class GameManager : MonoBehaviour
 {
