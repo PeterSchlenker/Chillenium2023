@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class LevelOverScreen : MonoBehaviour
 {
     GameManager gameManager;
+    [SerializeField] Sprite StarOutline;
     [SerializeField] Image AmberImage;
     [SerializeField] Image JadeImage;
     [SerializeField] Image JasperImage;
@@ -57,9 +58,15 @@ public class LevelOverScreen : MonoBehaviour
         AmberImage.gameObject.SetActive(Yellow);
         JadeImage.gameObject.SetActive(Green);
         JasperImage.gameObject.SetActive(Red);
-        Star1.gameObject.SetActive(StarOne);
-        Star2.gameObject.SetActive(StarTwo);
-        Star3.gameObject.SetActive(StarThree);
+        Star1.gameObject.SetActive(true);
+        if (!StarOne)
+            Star1.sprite = StarOutline;
+        Star2.gameObject.SetActive(true);
+        if (!StarTwo)
+            Star2.sprite = StarOutline;
+        Star3.gameObject.SetActive(true);
+        if (!StarTwo)
+            Star3.sprite = StarOutline;
 
         evilText.gameObject.SetActive(evil || lessEvil || friend);
         if(Red && evil)
@@ -83,7 +90,7 @@ public class LevelOverScreen : MonoBehaviour
             evilText.text = "Amber and Jade got tired of Jasper's shit and dropped his @$$. You go girls. Slay.";
         } else if (friend)
         {
-            friendText.text = "Jasper, Amber, and Jade left the dungeon, striding out together. Where once they had entered split and angry, they now exited as empathetic friends... for they shared one heart.";
+            evilText.text = "Jasper, Amber, and Jade left the dungeon, striding out together. Where once they had entered split and angry, they now exited as empathetic friends... for they shared one heart.";
         }
     }
 
