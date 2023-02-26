@@ -43,6 +43,7 @@ public class Flag : MonoBehaviour
         {
             Debug.Log("GM Is null");
         }
+        EnableButtons(false, false, false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -121,9 +122,19 @@ public class Flag : MonoBehaviour
 
     void EnableButtons(bool evil, bool lessEvil, bool friend)
     {
-        evilButton.gameObject.SetActive(evil);
-        lessEvilButton.gameObject.SetActive(lessEvil);
-        friendButton.gameObject.SetActive(friend);
+        evilButton.gameObject.SetActive(evil || lessEvil || friend);
+        if (evil)
+        {
+            evilButton.GetComponentInChildren<TextMeshProUGUI>().text = "Escape and abandon your friends?";
+        }
+        else if (lessEvil)
+        {
+            evilButton.GetComponentInChildren<TextMeshProUGUI>().text = "Escape and abandon your friend?";
+        }
+        else if (friend)
+        {
+            evilButton.GetComponentInChildren<TextMeshProUGUI>().text = "Escape?";
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
