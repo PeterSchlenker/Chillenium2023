@@ -10,6 +10,10 @@ public class WireSystem : MonoBehaviour
     public GameObject on;
     public GameObject off;
 
+    bool isOn = false;
+
+    private float waitTime = 0.1f;
+
     private void Start()
     {
         doors = GetComponentsInChildren<Door>();
@@ -18,6 +22,7 @@ public class WireSystem : MonoBehaviour
 
     public void TurnOn()
     {
+       isOn = true;
        foreach(Door door in doors)
         {
             door.Open();
@@ -34,6 +39,12 @@ public class WireSystem : MonoBehaviour
 
     public void TurnOff()
     {
+        isOn = false;
+        StartCoroutine(checkPlate());
+    }
+
+    private void TurnOffActual()
+    {
         foreach (Door door in doors)
         {
             door.Close();
@@ -46,5 +57,21 @@ public class WireSystem : MonoBehaviour
 
         on.SetActive(false);
         off.SetActive(true);
+    }
+
+    private IEnumerator checkPlate()
+    {
+        float timeLeft = waitTime;
+
+        while (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            yield return null;
+        }
+
+        if (!isOn)
+        {
+            TurnOffActual();
+        }
     }
 }
