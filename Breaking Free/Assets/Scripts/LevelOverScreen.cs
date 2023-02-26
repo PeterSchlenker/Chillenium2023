@@ -71,13 +71,13 @@ public class LevelOverScreen : MonoBehaviour
         evilText.gameObject.SetActive(evil || lessEvil || friend);
         if(Red && evil)
         {
-            evilText.text = "Jasper abandoned his friends to root in their depressed state... He did not share their heart...";
+            evilText.text = "Jasper abandoned his friends to rot in their depressed state... He did not share their heart...";
         } else if(Green && evil)
         {
-            evilText.text = "Jade abandoned her friends to root in their depressed state... She did not share their heart...";
+            evilText.text = "Jade abandoned her friends to rot in their depressed state... She did not share their heart...";
         } else if(Yellow && evil)
         {
-            evilText.text = "Amber abandoned her friends to root in their depressed state... She did not share their heart...";
+            evilText.text = "Amber abandoned her friends to rot in their depressed state... She did not share their heart...";
         } else if(Red && Green && lessEvil)
         {
             evilText.text = "Jasper and Jade abandoned Amber... They justify it to themselves by saying they were tired of her airheadedness, but deep down... they know they will miss her";
