@@ -727,6 +727,7 @@ MonoBehaviour:
   characters:
     serializedVersion: 2
     m_Bits: 0
+  gmPrefab: {fileID: 4443069745781815864, guid: ff868ba485c435946a28724a66e8c971, type: 3}
   nextSceneLoad: 0
 --- !u!1 &5361933421974830123
 GameObject:

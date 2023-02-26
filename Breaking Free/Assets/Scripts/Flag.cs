@@ -20,22 +20,29 @@ public class Flag : MonoBehaviour
 
     [SerializeField] LayerMask characters;
 
-    LevelOverScreen levelOverScreen;
-    GameManager gameManager;
+    [SerializeField] LevelOverScreen levelOverScreen;
+    [SerializeField] GameObject gameManager;
+
+    [SerializeField] GameManager gmPrefab;
 
     public int nextSceneLoad;
 
     private void Start()
     {
+        Debug.Log("Start");
         CompositeCollider2D = GetComponent<CompositeCollider2D>();
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
         //text = GetComponentInChildren<Button>();
         EnableButtons(false, false, false);
-        levelOverScreen = FindObjectOfType<LevelOverScreen>();
-        if (levelOverScreen == null)
-            Instantiate(levelOverScreen);
+        //levelOverScreen = GameObject.FindGameObjectsWithTag("LevelOverScreen")[0].GetComponent<LevelOverScreen>();
         levelOverScreen.gameObject.SetActive(false);
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = GameObject.FindGameObjectsWithTag("GameController")[0];
+        Debug.Log("Line 40");
+        Debug.Log(gameManager);
+        if(gameManager == null)
+        {
+            Debug.Log("GM Is null");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -147,7 +154,7 @@ public class Flag : MonoBehaviour
 
     public void DisplayLevelOverScreen()
     {
-        gameManager.LevelOver();
+        gameManager.GetComponent<GameManager>().LevelOver();
         FindObjectOfType<CharacterMovement>().levelOver();
         EnableButtons(false, false, false);
         levelOverScreen.gameObject.SetActive(true);
