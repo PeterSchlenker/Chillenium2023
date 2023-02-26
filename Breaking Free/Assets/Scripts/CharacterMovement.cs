@@ -36,6 +36,8 @@ public class CharacterMovement : MonoBehaviour
     public AudioSource electricity;
     public AudioSource pop;
 
+    private int currCharYGR = 1;
+
     void Start()
     {
         activeCharacter = greenCharacter;
