@@ -18,6 +18,8 @@ public class LevelOverScreen : MonoBehaviour
     [SerializeField] TextMeshProUGUI evilText;
     [SerializeField] TextMeshProUGUI lessEvilText;
     [SerializeField] TextMeshProUGUI friendText;
+    [SerializeField] bool isFinalLevelScreen = false;
+    [SerializeField] Image finalImage;
 
 
 
@@ -39,6 +41,14 @@ public class LevelOverScreen : MonoBehaviour
 
     public void DisplaySuccess(bool redHere, bool greenHere, bool yellowHere)
     {
+        if (isFinalLevelScreen)
+        {
+            finalImage.gameObject.SetActive(true);
+            redHere = !redHere;
+            greenHere = !greenHere;
+            yellowHere = !yellowHere;
+        }
+
         if(redHere && greenHere && yellowHere)
         {
             EnableUIStuff(true, true, true, true, true, true, false, false, true);
