@@ -8,6 +8,8 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] WireSystem wireSystem;
     BoxCollider2D boxCollider;
 
+    bool played = false;
+
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -48,6 +50,11 @@ public class PressurePlate : MonoBehaviour
             {
                 wireSystem.TurnOn();
                 chara.SetYellowAnimation(true);
+                if (!played)
+                {
+                    chara.electricity.Play();
+                    played = true;
+                }
             }
         }
     }
@@ -60,6 +67,7 @@ public class PressurePlate : MonoBehaviour
             if (isYellow && wireSystem.on.activeInHierarchy)
             {
                 chara.SetYellowAnimation(false);
+                played = false;
             }
 
             wireSystem.TurnOff();

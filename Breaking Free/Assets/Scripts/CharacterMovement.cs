@@ -31,6 +31,11 @@ public class CharacterMovement : MonoBehaviour
 
     GameOverScreen gameOverScreen;
 
+    public AudioSource breakSound;
+    public AudioSource step;
+    public AudioSource electricity;
+    public AudioSource pop;
+
     void Start()
     {
         activeCharacter = greenCharacter;
@@ -99,6 +104,8 @@ public class CharacterMovement : MonoBehaviour
     {
         isMoving = true;
 
+        pop.Play();
+
         float timeLeft = heartThrowTime;
         Vector3 originalHeartPos = heart.localPosition;
         while (timeLeft > 0)
@@ -130,6 +137,7 @@ public class CharacterMovement : MonoBehaviour
             if (activeCharacter == redCharacter)
             {
                 Destroy(Physics2D.CircleCast(targetPos, .2f, dir).transform.gameObject);
+                breakSound.Play();
             }
             else
             {
@@ -153,6 +161,8 @@ public class CharacterMovement : MonoBehaviour
             //TODO: Reset Level properly
             Die();
         }
+
+        if (targetPos != originalPos) { step.Play(); }
 
         while (timeLeft > 0 && targetPos != originalPos)
         {
