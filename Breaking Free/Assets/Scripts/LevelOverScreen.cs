@@ -68,6 +68,18 @@ public class LevelOverScreen : MonoBehaviour
         if (!StarThree)
             Star3.sprite = StarOutline;
 
+        if (MusicController.instance != null)
+        {
+            if (friend)
+            {
+                MusicController.instance.winTheme.Play();
+            }
+            else
+            {
+                MusicController.instance.loseTheme.Play();
+            }
+        }
+
         evilText.gameObject.SetActive(evil || lessEvil || friend);
         if(Red && evil)
         {
@@ -102,6 +114,6 @@ public class LevelOverScreen : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
