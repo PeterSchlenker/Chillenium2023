@@ -52,6 +52,7 @@ MonoBehaviour:
   levelTheme: {fileID: 8995902825785762733}
   winTheme: {fileID: 0}
   loseTheme: {fileID: 0}
+  breakSound: {fileID: 0}
 --- !u!82 &8995902825785762732
 AudioSource:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ AudioSource:
   m_GameObject: {fileID: 8995902825785762734}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4159174162577665819, guid: 4c0939363bd77894e861cf867e27a73c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1d01a4120f34d13469d059738191f4ba, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -157,7 +158,7 @@ AudioSource:
   m_GameObject: {fileID: 8995902825785762734}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4159174162577665819, guid: 4c0939363bd77894e861cf867e27a73c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 59c75df1a72614548a506141f4e1aec0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

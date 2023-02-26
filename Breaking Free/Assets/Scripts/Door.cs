@@ -8,6 +8,9 @@ public class Door : MonoBehaviour
 
     LayerMask character;
 
+    public AudioSource metalSlide;
+    private bool open = false;
+
     private void Start()
     {
         character = 9;
@@ -17,6 +20,10 @@ public class Door : MonoBehaviour
     {
         //TODO: Door animation trigger
         this.gameObject.layer = 0;
+        if (!open) { 
+            metalSlide.Play();
+            open = true;
+        }
     }
 
     public void Close()
@@ -27,6 +34,12 @@ public class Door : MonoBehaviour
         {
             FindObjectOfType<CharacterMovement>().Die();
             Debug.Log("Hey");
+        }
+
+        if (open)
+        {
+            metalSlide.Play();
+            open = false;
         }
     }
 }
